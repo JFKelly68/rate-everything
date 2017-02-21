@@ -1,0 +1,22 @@
+{
+  "name": "rate-everything",
+  "version": "0.0.1",
+  "description": "introduction to app concept for improved rating system",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JFKelly68/rate-everything.git"
+  },
+  "author": "James Kelly",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JFKelly68/rate-everything/issues"
+  },
+  "homepage": "https://github.com/JFKelly68/rate-everything#readme",
+  "devDependencies": {
+    "webpack": "^2.2.1"
+  }
+}
