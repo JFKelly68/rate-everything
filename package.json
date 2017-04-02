@@ -1,22 +1,82 @@
 {
   "name": "rate-everything",
   "version": "0.0.1",
-  "description": "introduction to app concept for improved rating system",
-  "main": "index.js",
+  "description": "Application to experiment with new rating methodology - built using react-starter by Luis Alberto Gudiño Salinas | elios264",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "run-p _lint _open:src",
+    "start:prod": "node tools/prodServer.js",
+    "share": "lt --port 8080 --subdomain elios264",
+    "prebuild": "run-p _lint _clean-dist",
+    "build": "node tools/build.js",
+    "postbuild": "npm run start:prod",
+    "deploy": "echo \"Error: no deploy defined\" && exit 1",
+    "_open:src": "node tools/devServer.js",
+    "_lint": "eslint ./src ./tools --color",
+    "_clean-dist": "rimraf ./dist && mkdir dist"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/JFKelly68/rate-everything.git"
+    "url": "git+https://github.com/jfkelly68/rate-everything.git"
   },
-  "author": "James Kelly",
+  "keywords": [
+    "react",
+    "redux",
+    "webpack2"
+  ],
+  "author": "James Kelly (&& elios264)",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/JFKelly68/rate-everything/issues"
+    "url": "https://github.com/jfkelly68/rate-everything/issues",
+    "email": "elios264@hotmail.com"
   },
-  "homepage": "https://github.com/JFKelly68/rate-everything#readme",
+  "homepage": "https://github.com/jfkelly68/rate-everything#readme",
   "devDependencies": {
-    "webpack": "^2.2.1"
+    "babel-core": "^6.22.1",
+    "babel-eslint": "^7.1.1",
+    "babel-loader": "^6.2.9",
+    "babel-plugin-transform-runtime": "^6.22.0",
+    "babel-preset-latest": "^6.22.0",
+    "babel-preset-react": "^6.22.0",
+    "babel-preset-stage-2": "^6.22.0",
+    "chalk": "^1.1.3",
+    "compression": "^1.6.2",
+    "css-loader": "^0.26.1",
+    "eslint": "^3.14.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-no-loops": "^0.3.0",
+    "eslint-plugin-react": "^6.9.0",
+    "express": "^4.14.0",
+    "extract-text-webpack-plugin": "^2.0.0-rc.3",
+    "file-loader": "^0.10.0",
+    "html-webpack-plugin": "^2.26.0",
+    "localtunnel": "^1.8.2",
+    "node-sass": "^4.3.0",
+    "npm-run-all": "^4.0.1",
+    "open": "0.0.5",
+    "react-hot-loader": "^3.0.0-beta.6",
+    "redux-logger": "^2.8.1",
+    "rimraf": "^2.5.4",
+    "sass-loader": "^4.1.0",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^2.2.0",
+    "webpack-dev-server": "^2.2.0",
+    "webpack-md5-hash": "0.0.5"
+  },
+  "dependencies": {
+    "babel-runtime": "^6.20.0",
+    "es6-promise": "^4.0.5",
+    "firebase": "^3.6.10",
+    "isomorphic-fetch": "^2.2.1",
+    "moment": "^2.17.1",
+    "normalize.css": "^5.0.0",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-helmet": "^4.0.0",
+    "react-redux": "^5.0.2",
+    "react-router": "^3.0.1",
+    "redux": "^3.6.0",
+    "redux-saga": "^0.14.3",
+    "redux-thunk": "^2.1.0"
   }
 }

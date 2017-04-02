@@ -1,0 +1,96 @@
+* {
+  user-select: none;
+}
+
+.main-app {
+    background: darkgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+  h1 {
+    font-size: 12em;
+    margin: auto;
+    color: dimgray;
+  }
+
+  .title {
+    &--bg {
+      position: absolute;
+      text-align: center;
+      z-index: 1;
+    }
+  }
+
+  .slider-nav {
+    display: flex;
+    height: 40px;
+    align-items: center;
+    z-index: 2;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .rating {
+    &-container {
+      display: flex;
+      flex-direction: row;
+      width: 40%;
+      height: 50%;
+      align-items: center;
+      z-index: 2;
+    }
+  }
+
+  .voting {
+    &-container {
+      display: flex;
+      margin: auto;
+      height: 100%;
+      width: 100%;
+      flex-direction: column;
+    }
+  }
+
+  .item {
+    &-container {
+      margin: auto;
+      flex: 1 50%;
+      align-items: center;
+      text-align: center;
+    }
+  }
+
+  .vote-btn {
+    display: flex;
+    flex: 1 25%;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0,0,0,0.25);
+    transition: 0.25s background-color ease-out;
+    z-index: 2;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &--up {
+      border-radius: 10px 10px 0 0;
+      &:hover {background-color: rgba(35, 200, 60, 0.5);}
+      &:focus {background-color: rgba(35, 200, 60, 0.85);}
+    }
+    &--down {
+      border-radius: 0 0 10px 10px;
+      &:hover {background-color: rgba(220, 60, 30, 0.5);}
+      &:focus {background-color: rgba(220, 60, 30, 0.85);}
+    }
+  }
+
+  .world {
+    font-size: 5em;
+    color: dimgray;
+  }
+}
